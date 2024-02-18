@@ -45,6 +45,12 @@ namespace DataAccess
             }
         }
 
+        public void Purge(TKey key)
+        {
+            _cache.Remove(key);
+            _frequencyCounter.Remove(key);
+        }
+
         private void EvictItemFromCache()
         {
             var minCoutner = _frequencyCounter.Values.Min();
