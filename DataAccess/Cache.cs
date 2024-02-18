@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DataAccess
 {
     public class Cache<TKey, TValue>
@@ -16,13 +11,24 @@ namespace DataAccess
         }
         public TValue Get(TKey key)
         {
-            // Implement get item by key from the cache
+            if (_cache.TryGetValue(key, out TValue value))
+            {
+                return value;
+            }
+
             return default;
         }
 
         public void Set(TKey key, TValue value)
         {
-            // Implement setting item by key to the cache
+            if (_cache.ContainsKey(key))
+            {
+                _cache[key] = value;
+            }
+            else 
+            { 
+                _cache.Add(key, value);
+            }
         }
     }
 }
