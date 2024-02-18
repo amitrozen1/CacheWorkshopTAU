@@ -20,10 +20,26 @@ else
 
 @code {
     List<Dessert> desserts;
+    static Cache<string, List<Dessert>> cache;
 
     protected override async Task OnInitializedAsync()
     {
-        desserts = await dataAccess.GetDesserts();
+        // Create instance if doesn't exist
+        if (cache == null)
+        {
+            cache = new();
+        }
+
+        // Try get desserts from cache
+        desserts = cache.Get("Desserts");
+
+        // If not Desserts value exists in cache - get value from Data access
+        // AND set the value in cache, to be available next time we access it
+        if (desserts == null)
+        {
+            desserts = await dataAccess.GetDesserts();
+            cache.Set("Desserts", desserts);
+        }
 
     }
 
