@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheWorkshopTAU", "CacheWorkshopTAU\CacheWorkshopTAU.csproj", "{CF8AE596-6CEF-45D4-A228-229995D194E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3A744C38-85EA-4FDF-BEBD-509BDA0C4275}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF8AE596-6CEF-45D4-A228-229995D194E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8AE596-6CEF-45D4-A228-229995D194E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8AE596-6CEF-45D4-A228-229995D194E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8AE596-6CEF-45D4-A228-229995D194E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A744C38-85EA-4FDF-BEBD-509BDA0C4275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A744C38-85EA-4FDF-BEBD-509BDA0C4275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A744C38-85EA-4FDF-BEBD-509BDA0C4275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A744C38-85EA-4FDF-BEBD-509BDA0C4275}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CAED8B1-3F3D-4505-8B66-2CE4D5FA7795}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+﻿@page "/desserts"
+
+@inject DessertsDataAccess dataAccess
+
+<PageTitle>Desserts</PageTitle>
+
+<h1>Desserts</h1>
+
+@if(desserts is not null)
+{
+    foreach (var desert in desserts)
+    {
+        <h3>@desert.DessertName => @desert.NumberOfIngredients</h3>
+    }
+}
+else
+{
+    <h3>Loading desserts...</h3>    
+}
+
+@code {
+    List<Dessert> desserts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        desserts = await dataAccess.GetDesserts();
+
+    }
+
+}
